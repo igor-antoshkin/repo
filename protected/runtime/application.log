@@ -1,0 +1,279 @@
+2012/04/03 14:33:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1292 Incorrect datetime value: 'srtb' for column 'time_start' at row 1. The SQL statement executed was: INSERT INTO `online` (`id_user`, `lat`, `long`, `time_start`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\web\apache\htdocs\ikway\protected\controllers\OnlineController.php (72)
+in C:\web\apache\htdocs\ikway\index.php (13)
+2012/04/03 14:33:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1292 Incorrect datetime value: 'srtb' for column 'time_start' at row 1. The SQL statement executed was: INSERT INTO `online` (`id_user`, `lat`, `long`, `time_start`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\web\apache\htdocs\yii\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\web\apache\htdocs\yii\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 C:\web\apache\htdocs\yii\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 C:\web\apache\htdocs\ikway\protected\controllers\OnlineController.php(72): CActiveRecord->save()
+#3 C:\web\apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): OnlineController->actionCreate()
+#4 C:\web\apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\web\apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\web\apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\web\apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\web\apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\web\apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('create')
+#13 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('online/create')
+#14 C:\web\apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\web\apache\htdocs\ikway\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ikway/index.php?r=online/create
+HTTP_REFERER=http://localhost/ikway/index.php?r=online/create
+---
+2012/04/03 14:34:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\web\apache\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\web\apache\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\web\apache\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\web\apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\web\apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\web\apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\web\apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('online/admin')
+#9 C:\web\apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\web\apache\htdocs\ikway\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ikway/index.php?r=online/admin
+HTTP_REFERER=http://localhost/ikway/index.php?r=online/create
+---
+2012/04/03 14:35:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\web\apache\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\web\apache\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\web\apache\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\web\apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\web\apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\web\apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\web\apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('online/admin')
+#9 C:\web\apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\web\apache\htdocs\ikway\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ikway/index.php?r=online/admin
+HTTP_REFERER=http://localhost/ikway/index.php?r=online
+---
+2012/04/03 15:01:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\web\apache\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\web\apache\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\web\apache\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\web\apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\web\apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\web\apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\web\apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('online/admin')
+#9 C:\web\apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\web\apache\htdocs\ikway\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ikway/index.php?r=online/admin
+HTTP_REFERER=http://localhost/ikway/index.php?r=online/create
+---
+2012/04/03 15:04:12 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\web\apache\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\web\apache\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\web\apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\web\apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\web\apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\web\apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\web\apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('online/view')
+#10 C:\web\apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\web\apache\htdocs\ikway\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/ikway/index.php?r=online/view
+---
+2012/04/03 15:04:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\web\apache\htdocs\ikway\protected\controllers\OnlineController.php:160
+Stack trace:
+#0 C:\web\apache\htdocs\ikway\protected\controllers\OnlineController.php(54): OnlineController->loadModel('3')
+#1 [internal function]: OnlineController->actionView('3')
+#2 C:\web\apache\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(OnlineController), Array)
+#3 C:\web\apache\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(OnlineController), Object(ReflectionMethod), Array)
+#4 C:\web\apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\web\apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\web\apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\web\apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\web\apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\web\apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('view')
+#13 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('online/view')
+#14 C:\web\apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\web\apache\htdocs\ikway\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ikway/index.php?r=online/view&id=3
+---
+2012/04/04 02:08:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\web\apache\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\web\apache\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\web\apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\web\apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\web\apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\web\apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\web\apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('online/view')
+#10 C:\web\apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\web\apache\htdocs\ikway\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/ikway/index.php?r=online/view
+HTTP_REFERER=http://localhost/ikway/index.php?r=site/index
+---
+2012/04/04 02:09:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\web\apache\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\web\apache\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\web\apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\web\apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\web\apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\web\apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\web\apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('online/view')
+#10 C:\web\apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\web\apache\htdocs\ikway\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/ikway/index.php?r=online/view
+HTTP_REFERER=http://localhost/ikway/index.php?r=online
+---
+2012/04/04 21:59:11 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'long LIKE '%23%')' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `online` `t` WHERE ((id_user LIKE :ycp0) AND (lat LIKE :ycp1)) AND (long LIKE :ycp2).
+in C:\web\apache\htdocs\ikway\protected\views\online\admin.php (53)
+in C:\web\apache\htdocs\ikway\protected\controllers\OnlineController.php (148)
+in C:\web\apache\htdocs\ikway\index.php (13)
+2012/04/04 21:59:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'long LIKE '%23%')' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `online` `t` WHERE ((id_user LIKE :ycp0) AND (lat LIKE :ycp1)) AND (long LIKE :ycp2)' in C:\web\apache\htdocs\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\web\apache\htdocs\yii\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\web\apache\htdocs\yii\framework\db\ar\CActiveRecord.php(1536): CDbCommand->queryScalar()
+#2 C:\web\apache\htdocs\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\web\apache\htdocs\yii\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\web\apache\htdocs\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\web\apache\htdocs\yii\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 C:\web\apache\htdocs\yii\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#7 C:\web\apache\htdocs\yii\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#8 C:\web\apache\htdocs\yii\framework\web\CBaseController.php(148): CGridView->init()
+#9 C:\web\apache\htdocs\yii\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 C:\web\apache\htdocs\ikway\protected\views\online\admin.php(53): CBaseController->widget('zii.widgets.gri...', Array)
+#11 C:\web\apache\htdocs\yii\framework\web\CBaseController.php(127): require('C:\web\apache\h...')
+#12 C:\web\apache\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\web\apache\h...', Array, true)
+#13 C:\web\apache\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\web\apache\h...', Array, true)
+#14 C:\web\apache\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#15 C:\web\apache\htdocs\ikway\protected\controllers\OnlineController.php(148): CController->render('admin', Array)
+#16 C:\web\apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): OnlineController->actionAdmin()
+#17 C:\web\apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\web\apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\web\apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\web\apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\web\apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\web\apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#26 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('online/admin')
+#27 C:\web\apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\web\apache\htdocs\ikway\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/ikway/index.php?r=online%2Fadmin&Online%5Bid_user%5D=2&Online%5Blat%5D=23&Online%5Blong%5D=23&Online%5Btime_start%5D=&Online_page=1&ajax=online-grid
+HTTP_REFERER=http://localhost/ikway/index.php?r=online/admin
+---
+2012/04/04 21:59:12 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'long LIKE '%23%')) AND (time_start LIKE '%2323%')' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `online` `t` WHERE (((id_user LIKE :ycp0) AND (lat LIKE :ycp1)) AND (long LIKE :ycp2)) AND (time_start LIKE :ycp3).
+in C:\web\apache\htdocs\ikway\protected\views\online\admin.php (53)
+in C:\web\apache\htdocs\ikway\protected\controllers\OnlineController.php (148)
+in C:\web\apache\htdocs\ikway\index.php (13)
+2012/04/04 21:59:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'long LIKE '%23%')) AND (time_start LIKE '%2323%')' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `online` `t` WHERE (((id_user LIKE :ycp0) AND (lat LIKE :ycp1)) AND (long LIKE :ycp2)) AND (time_start LIKE :ycp3)' in C:\web\apache\htdocs\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\web\apache\htdocs\yii\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\web\apache\htdocs\yii\framework\db\ar\CActiveRecord.php(1536): CDbCommand->queryScalar()
+#2 C:\web\apache\htdocs\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\web\apache\htdocs\yii\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\web\apache\htdocs\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\web\apache\htdocs\yii\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 C:\web\apache\htdocs\yii\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#7 C:\web\apache\htdocs\yii\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#8 C:\web\apache\htdocs\yii\framework\web\CBaseController.php(148): CGridView->init()
+#9 C:\web\apache\htdocs\yii\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 C:\web\apache\htdocs\ikway\protected\views\online\admin.php(53): CBaseController->widget('zii.widgets.gri...', Array)
+#11 C:\web\apache\htdocs\yii\framework\web\CBaseController.php(127): require('C:\web\apache\h...')
+#12 C:\web\apache\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\web\apache\h...', Array, true)
+#13 C:\web\apache\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\web\apache\h...', Array, true)
+#14 C:\web\apache\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#15 C:\web\apache\htdocs\ikway\protected\controllers\OnlineController.php(148): CController->render('admin', Array)
+#16 C:\web\apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): OnlineController->actionAdmin()
+#17 C:\web\apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\web\apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\web\apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\web\apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\web\apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\web\apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\web\apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#26 C:\web\apache\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('online/admin')
+#27 C:\web\apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\web\apache\htdocs\ikway\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/ikway/index.php?r=online%2Fadmin&Online%5Bid_user%5D=2&Online%5Blat%5D=23&Online%5Blong%5D=23&Online%5Btime_start%5D=2323&Online_page=1&ajax=online-grid
+HTTP_REFERER=http://localhost/ikway/index.php?r=online/admin
+---
+2012/04/05 13:06:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in Z:\home\localhost\www\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 Z:\home\localhost\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 Z:\home\localhost\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 Z:\home\localhost\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 Z:\home\localhost\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('online/admin')
+#9 Z:\home\localhost\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\ikway\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ikway/index.php?r=online/admin
+HTTP_REFERER=http://localhost/ikway/index.php?r=online/index
+---
+2012/04/08 17:49:59 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.addr1212" is not defined.' in Z:\home\localhost\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\localhost\www\yii\framework\web\helpers\CHtml.php(2044): CComponent->__get('addr1212')
+#1 Z:\home\localhost\www\yii\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(LoginForm), 'addr1212')
+#2 Z:\home\localhost\www\yii\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(LoginForm), 'addr1212', Array)
+#3 Z:\home\localhost\www\ikway\protected\views\site\login.php(28): CHtml::activeTextField(Object(LoginForm), 'addr1212', Array)
+#4 Z:\home\localhost\www\yii\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#8 Z:\home\localhost\www\ikway\protected\controllers\SiteController.php(92): CController->render('login', Array)
+#9 Z:\home\localhost\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\localhost\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\localhost\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\localhost\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\localhost\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#14 Z:\home\localhost\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#15 Z:\home\localhost\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\localhost\www\ikway\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ikway/index.php?r=site/login
+---
+2012/04/09 11:48:32 [warning] [application] Failed to set unsafe attribute "ll" of "LoginForm".
+in Z:\home\localhost\www\ikway\protected\controllers\SiteController.php (86)
+in Z:\home\localhost\www\ikway\index.php (13)
+2012/04/09 12:53:23 [warning] [application] Failed to set unsafe attribute "ll" of "LoginForm".
+in Z:\home\localhost\www\ikway\protected\controllers\SiteController.php (86)
+in Z:\home\localhost\www\ikway\index.php (13)
+2012/04/09 12:54:56 [warning] [application] Failed to set unsafe attribute "ll" of "LoginForm".
+in Z:\home\localhost\www\ikway\protected\controllers\SiteController.php (86)
+in Z:\home\localhost\www\ikway\index.php (13)
+2012/04/09 12:56:22 [warning] [application] Failed to set unsafe attribute "ll" of "LoginForm".
+in Z:\home\localhost\www\ikway\protected\controllers\SiteController.php (86)
+in Z:\home\localhost\www\ikway\index.php (13)
